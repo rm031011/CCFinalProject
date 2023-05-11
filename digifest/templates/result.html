@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Final Result</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+
+	<div class="container">
+
+		<center><h3>The Overall Reviews/Problems of The Citizens are:</h3></center>
+
+		
+		{% for i in review %}
+			<ul>
+
+				<li>{{i}}</li>
+				
+			</ul>
+		{% endfor %}
+
+
+
+		<center><h3>The Positive reviews of the Citizens are:</h3></center>
+
+		{% for i in pos %}
+			<ul>
+				<li>{{i}}</li>
+				
+			</ul>
+			
+
+		{% endfor %}
+
+
+		<center><h3>The Problems Citizens facing are:</h3></center>
+
+		{% for i in neg %}
+			<ul>
+				<li>{{i}}</li>
+				
+			</ul>
+			
+
+		{% endfor %}
+
+		<center>
+			<h4>Postive Wordcloud</h4>
+<img src="{% static 'img/pos_plot.jpg' %}">
+
+		</center>
+
+		<center>
+			<h4>Negative Wordcloud</h4>
+<img src="{% static 'img/neg_plot.jpg' %}">
+
+		</center>
+
+		
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class="login-box">
+
+		
+		<h2>Login Here</h2>
+		<form action="/pol_log/hello/" method="POST">
+			{% csrf_token %}
+			<div class="form-group">
+			<label for="un">Username:</label>
+			<input id="un" type="email" name="username1" placeholder="Enter your mailid" required class="ri">
+			</div>
+			<div class="form-group">
+			<label for="ps">Password:</label> 
+			<input id="ps" type="password" name="password1" placeholder="Enter password" required class="ri">
+			</div>
+			<center><button class="btn btn-success btn-lg" type="submit">Login</button></center>
+            
+            
+            <h5>Dont have an account?<a href="signup.html"> SignIn </a></h5>
+			
+		</form>
+	</div>
+
+{% endblock content %}
+
+<!--
+{% load static %}
+<img src="{% static 'img/avatar.jpg' %}" class="avatar">
+
+	-->
