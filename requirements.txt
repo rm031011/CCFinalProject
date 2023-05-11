@@ -1,0 +1,3 @@
+pip3 install django
+pip3 install wordcloud
+pip3 install textblob
